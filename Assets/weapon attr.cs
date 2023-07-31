@@ -8,9 +8,11 @@ public class weaponattr : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("enemy"))
+        System.Console.WriteLine("piff");
+        if (other.CompareTag("enemy")) 
         {
             other.GetComponent<attributes>().TakeDMG(atm.attack);
+            System.Console.WriteLine("puff");
         }
     }
 }
